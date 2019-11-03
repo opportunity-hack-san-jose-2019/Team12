@@ -1,0 +1,35 @@
+<div class="bg-dark">
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <div class="form-label-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email address" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-group">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "password" %>
+            </div>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-primary btn-block", style: "background-color: #EB3B46; border-color: #EB3B46" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

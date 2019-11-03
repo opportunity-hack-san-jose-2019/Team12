@@ -1,2 +1,26 @@
-<h1>Check in as an interviewer</h1>
-<p>put your email address</p>
+<div style="background-color: #5f6267;";>
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Interviewer check-in</div>
+      <div class="card-body">
+        <%= form_with model: @check_in do |f| %>
+          <div class="form-group">
+            <div class="form-label-group">
+              <%= f.label :email %>
+              <%= f.text_field :email, class: "form-control", placeholder: "Email address"  %>
+            </div>
+
+            <div class="form-label-group">
+              <%= f.label :register_code %>
+              <%= f.text_field :register_code, class: "form-control", placeholder: "Registration Code"  %>
+            </div>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Check in", class: "btn btn-primary btn-block", style: "background-color: #EB3B46; border-color: #EB3B46" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

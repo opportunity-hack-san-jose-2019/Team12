@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   def index
   end
 
+  def dashboard
+  end
+
   def interviewer_checkin
     @check_in
   end
