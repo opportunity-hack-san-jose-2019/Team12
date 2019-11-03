@@ -6,22 +6,38 @@ class HomeController < ApplicationController
   end
 
   def interviewer_checkin
-    @check_in
   end
 
   def check_in_interviewer
-    # find student by email
-    # find register code by register code
-    # get interview and update to be checked in
+    user = Interviewer.find_by email: params[:email]
+    code = RegisterCode.find_by(token: params[:register_code])
+
+    if code and user == code.user
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: 'Checked in successfully' }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to interviewer_checkin_url, alert: 'Wrong register code' }
+      end
+    end
   end
 
   def interviewee_checkin
-    @check_in
   end
 
   def check_in_interviewee
-    # find student by email
-    # find register code by register code
-    # get interview and update to be checked in
+    user = Interviewee.find_by email: params[:email]
+    code = RegisterCode.find_by(token: params[:register_code])
+
+    if code and user == code.user
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: 'Checked in successfully' }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to interviewer_checkin_url, alert: 'Wrong register code' }
+      end
+    end
   end
 end

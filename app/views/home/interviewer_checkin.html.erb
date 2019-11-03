@@ -3,21 +3,21 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Interviewer check-in</div>
       <div class="card-body">
-        <%= form_with model: @check_in do |f| %>
+        <%= form_with(url: "/interviewer_checkin") do %>
           <div class="form-group">
             <div class="form-label-group">
-              <%= f.label :email %>
-              <%= f.text_field :email, class: "form-control", placeholder: "Email address"  %>
+              <%= label_tag :email %>
+              <%= text_field_tag :email, "", class: "form-control", placeholder: "Email address"  %>
             </div>
 
             <div class="form-label-group">
-              <%= f.label :register_code %>
-              <%= f.text_field :register_code, class: "form-control", placeholder: "Registration Code"  %>
+              <%= label_tag :register_code %>
+              <%= text_field_tag :register_code, "", class: "form-control", placeholder: "Registration Code"  %>
             </div>
           </div>
 
           <div class="actions">
-            <%= f.submit "Check in", class: "btn btn-primary btn-block", style: "background-color: #EB3B46; border-color: #EB3B46" %>
+            <%= submit_tag "Check in", class: "btn btn-primary btn-block", style: "background-color: #EB3B46; border-color: #EB3B46" %>
           </div>
         <% end %>
       </div>
