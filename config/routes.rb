@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :interviews
+  resources :events
   root to: "home#index"
   get 'landing', action: :index, controller: 'home'
   get 'interviewer_checkin', action: :interviewer_checkin, controller: 'home'
