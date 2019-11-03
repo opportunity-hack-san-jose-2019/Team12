@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token: MyString
+  interviewer: one
+  student: one
+  interview: one
+
+two:
+  token: MyString
+  interviewer: two
+  student: two
+  interview: two

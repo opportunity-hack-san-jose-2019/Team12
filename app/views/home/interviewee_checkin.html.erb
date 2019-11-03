@@ -1,2 +1,6 @@
 <h1>Check in as an interviewee</h1>
-<p>put your email address</p>
+
+<%= form_with model: @check_in do |f| %>
+  <%= f.text_field :email %>
+  <%= f.text_field :register_code %>
+<% end %>
