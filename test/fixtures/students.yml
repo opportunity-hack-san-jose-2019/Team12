@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  attendance_score: 1.5
+  module_score: 1.5
+  project_score: 1.5
+  total_score: 1.5
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  attendance_score: 1.5
+  module_score: 1.5
+  project_score: 1.5
+  total_score: 1.5
