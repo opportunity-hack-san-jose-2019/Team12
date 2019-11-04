@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'dashboard', action: :dashboard, controller: 'home'
   get 'charts', action: :charts, controller: 'home'
   get 'tables', action: :tables, controller: 'home'
+  get 'push', action: :push_sms, controller: 'home'
 
   devise_for :admins
 end
